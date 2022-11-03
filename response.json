@@ -1,0 +1,19 @@
+[
+  {
+    "response_type": "greeting",
+    "user_input": ["hello", "hi", "hey", "How are ya","How ya doin'", "How's it goin'",
+                    "How's it going", "How's life", "Howdy", "Sup", "What's new",
+                    "What's up","Namaste", "Yo"],
+    "response": "Hey there!"
+  },
+  {
+    "response_type": "greeting",
+    "user_input": ["see you", "goodbye", "bye"],
+    "response": "See you later!"
+  },
+  {
+    "response_type": "greeting",
+    "user_input": ["nice to meet you", "thank you"],
+    "response": "The pleasure is all mine!"
+  }
+]
