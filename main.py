@@ -22,7 +22,7 @@ def greet_response(user_inputs):
 
         if required_score == len(required_words):
             for word in user_inputs:
-                if word in response["user_input"]:
+                if word in response["input"]:
                     response_score = response_score + 1
 
         score_list.append(response_score)
@@ -30,7 +30,7 @@ def greet_response(user_inputs):
     response_index = score_list.index(best_response)
 
     if best_response != 0:
-        return random.choice(data[response_index]["bot_response"])
+        return random.choice(data[response_index]["response"])
     else:
         return alternate_response.alternate_response()
 
