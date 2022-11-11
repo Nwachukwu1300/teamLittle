@@ -1,19 +1,27 @@
 [
   {
     "response_type": "greeting",
-    "user_input": ["hello", "hi", "hey", "How are ya","How ya doin'", "How's it goin'",
-                    "How's it going", "How's life", "Howdy", "Sup", "What's new",
-                    "What's up","Namaste", "Yo"],
-    "response": "Hey there!"
+    "user_input": ["hello", "hi", "hey"],
+    "bot_response": ["Hey there!", "Hi"],
+    "required_words": []
   },
   {
     "response_type": "greeting",
-    "user_input": ["see you", "goodbye", "bye"],
-    "response": "See you later!"
+    "user_input": ["see", "you", "goodbye", "bye"],
+    "bot_response": ["See you later!", "Bye-bye"],
+    "required_words": []
   },
   {
     "response_type": "greeting",
-    "user_input": ["nice to meet you", "thank you"],
-    "response": "The pleasure is all mine!"
+    "user_input": ["nice", "to", "meet", "you"],
+    "bot_response": ["The pleasure is all mine!", "Nice meeting you"],
+    "required_words": ["nice", "meet", "you"]
+  },
+
+  {
+    "response_type": "question",
+    "user_input": ["how", "are", "you"],
+    "bot_response": ["I'm great! Thanks for asking.", "I'm alright"],
+    "required_words": ["how", "are", "you"]
   }
 ]
