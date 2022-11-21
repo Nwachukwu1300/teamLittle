@@ -85,12 +85,3 @@ def titles_custom():
     for cu in custom():
         print(cu["title"],"\n")
     return "\n"
-
-
-
-#print(titles_specific())
-#print(top_ten_british())
-#print(titles_british())
-#print(titles_publisher())
-#print(top_ten_country())
-#print(titles_custom())
