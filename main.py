@@ -1,11 +1,22 @@
+# Importing json, random and nltk
 import json
-import alternate_response
-import re
 import random
-
+import nltk
 
 with open("response.json") as responses:
     data = json.load(responses)
+
+
+def alternate_response():
+    alternates = [
+        "My apologies I didn't catch that.",
+        "I would appreciate if you could be more descriptive.",
+        "Please try asking another question, I can't yet respond to that one.",
+        "It seems like you wrote something that I don't fully grasp.",
+        "Would you mind rephrasing it for me?"
+    ]
+    final_response = random.randrange(len(alternates))
+    return alternates[final_response]
 
 
 def greet_response(user_inputs):
@@ -32,14 +43,14 @@ def greet_response(user_inputs):
     if best_response != 0:
         return random.choice(data[response_index]["response"])
     else:
-        return alternate_response.alternate_response()
+        return alternate_response()
 
 
+print("Hello my name is little, I am a chatbot that can tell you the news of any country in the world, in any category"
+      ", for any specific publisher you want, or news about a particular story you want.")
 user_name = input("What should I call you? : ")
 while True:
     user_input = input(f"{user_name}: ")
     lower_input = user_input.lower()
-    final_input = re.split(r'\s+|[,ˆ&*()_}{";?!@#$%-]\s*', lower_input)
+    final_input = nltk.word_tokenize(lower_input)
     print("Little: ", greet_response(final_input))
-
-
