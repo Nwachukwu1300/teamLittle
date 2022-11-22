@@ -38,7 +38,7 @@
   },
   {
     "response_type": "question",
-    "input": ["favourite", "food", "to", "eat"],
+    "input": ["what","'s","your","favourite", "food", "to", "eat"],
     "response": ["I'm a chatbot so I don't eat anything.", "If I could eat I would probably like spaghetti first."],
     "required_words": ["food"]
   },
