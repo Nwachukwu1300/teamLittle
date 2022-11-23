@@ -1,4 +1,4 @@
-# Importing json, random and nltk
+# Importing json, random, re and nltk
 # The first video I watched for the project: https://www.youtube.com/watch?v=1lwddP0KUEg&t=1523s
 # From the video I knew that the chatbot would need the nltk module
 import json
@@ -76,8 +76,11 @@ print("Hello my name is Little.\nI am a chatbot that can tell you the news of an
 user_name = input("What should I call you? : ")
 # A while loop that runs forever
 while 1:
-    # The variable that stores the user input and
+    # The variable that stores the user input
     user_input = input(f"{user_name}: ")
+    #  A for loop that removes the symbols the user may input
+    for char in "ˆ&*()_}{;?!@#$%-":
+        user_input = user_input.replace(char, "")
     # Converts the user's input to lower case
     lower_input = user_input.lower()
     # If the user types "exit" or "end" in the terminal then the code would break
@@ -87,3 +90,4 @@ while 1:
     final_input = nltk.word_tokenize(lower_input)
     # Prints "little:" to make the user easily know what Little(the chatbot) has to say
     print("Little: ", greet_response(final_input))
+    print(user_input)
