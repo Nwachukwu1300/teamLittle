@@ -14,6 +14,7 @@ response = requests.request("GET", url, headers=headers, params=querystring)
 print(response.text)
 
 # followed basic OpenWeatherMap api tutorial by NeuralNine on YouTube
+# https://www.youtube.com/watch?v=9P5MY_2i7K8
 weather_base_url = "http://api.openweathermap.org/data/2.5/weather?"
 forecast_base_url = "http://api.openweathermap.org/data/2.5/forecast?"
 geocode_base_url = "http://api.openweathermap.org/geo/1.0/direct?"
